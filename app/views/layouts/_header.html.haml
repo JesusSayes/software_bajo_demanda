@@ -1,0 +1,13 @@
+%div.navbar.navbar-inverse.navbar-fixed-top
+  %div.navbar-inner
+    %div.container
+      =link_to "Software bajo Demanda", home_path , {:class=>"brand"}
+      %ul.nav
+        %li
+          =link_to home_path do
+            %i.icon-home
+            Home
+        %li
+          =link_to new_contact_path do
+            %i.icon-envelope
+            Contacto

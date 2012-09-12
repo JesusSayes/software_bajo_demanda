@@ -1,0 +1,9 @@
+- if target.errors.any?
+  .alert.alert-error
+    = link_to "x", "#", :class=>"close", :"data-dismiss"=>"alert"
+    %h4
+      = pluralize(target.errors.count, "error")
+      no permiten registrar:
+    %ul
+      - target.errors.full_messages.each do |msg|
+        %li= msg

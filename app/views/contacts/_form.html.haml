@@ -1,0 +1,25 @@
+.span3
+.span6
+  = form_for(@contact, :html => {:class => "form-horizontal"}) do |f|
+    = render "shared/error_messages", :target => @contact
+    %div.control-group
+      = f.label :name, :class => "control-label"
+      .controls
+        = f.text_field :name
+    %div.control-group
+      = f.label :email, :class => "control-label"
+      .controls
+        = f.text_field :email
+    %div.control-group
+      = f.label :content, :class => "control-label"
+      .controls
+        = f.text_area :content, :size => "30x8"
+    %div.control-group
+      = f.label :phone, :class => "control-label"
+      .controls
+        = f.text_field :phone
+    %div.control-group
+      .controls
+        %div.pull-right
+          = f.submit "Enviar Mensaje"
+.span3
