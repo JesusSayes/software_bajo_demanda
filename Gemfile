@@ -34,11 +34,10 @@ gem "validate_email"
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
+group :development, :test do
+  gem 'capistrano'
+  gem 'rvm-capistrano'
+end
 
 # To use debugger
 # gem 'debugger'
